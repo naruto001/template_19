@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+/* reset */
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,img,form,applet,fieldset,legend,button,input,textarea,th,table,tr,td {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body {
+    font-family: "微软雅黑";
+    font-size: 12px;
+    color: #666;
+    min-width: 320px;
+    max-width: 640px;
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+}
+
+body,div,fieldset,form,h1,h2,h3,h4,h5,h6,html,p {
+    -webkit-text-size-adjust:none;
+}
+
+/*  ::-ms-clear 是文本清除按钮，也就是input右方的叉叉 ::-ms-reveal是密码查看按钮，也就密码框右边的小眼睛 */
+input::-ms-clear {
+    display: none;
+}
+
+/*清楚文本框X*/
+input,
+select,
+textarea {
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none; 
+    /* 改变按钮和其他控件的外观，使其类似于原生控件 */
+}
+
+html {
+    /* 设置或检索是否允许用户选中文本 */
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background: #f6f9fc;
+    width: 100%;
+    height: 100%;
+    /* -webkit-tap-highlight-color:这个属性只用于iOS (iPhone和iPad)。当你点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景。要重设这个表现，你可以设置-webkit-tap-highlight-color为任何颜色。
+想要禁用这个高亮，设置颜色的alpha值为0即可 */
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    /* 在input框中有时想将输入的字和placeholder设为不同的颜色或其它效果 */
+    color: #000;
+}
+
+/* img */
+img {
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    border: none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+/* div */
+li,
+ul {
+    list-style: none;
+    outside: none;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    width: 100%;
+}
+
+a,b,i,span,input,select,dl,dd,dt,p {
+    font-family: "微软雅黑";
+}
+
+/* font */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,a:focus {
+    text-decoration: none;
+}
+
+/* end reset */
+
+/* animation */
+@-webkit-keyframes op {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@-webkit-keyframes qn {
+    0% {
+        -webkit-transform:rotate(0deg);
+    }
+    50% {
+        -webkit-transform:rotate(70deg);
+    }
+    100% {
+        -webkit-transform:rotate(0deg);
+    }
+}
+@-webkit-keyframes qw {
+    0%{
+        -webkit-transform:rotatez(0deg);
+    }
+    100% {
+        -webkit-transform:rotatez(-360deg);
+    }
+}
+@-webkit-keyframes rotate {
+    0%{
+        -webkit-transform:rotatez(0deg);
+    }
+    100% {
+        -webkit-transform:rotatez(360deg);
+    }
+}
+@-webkit-keyframes py {
+    0% {
+        -webkit-transform:translate(0,-5px);
+    }
+    50% {
+        -webkit-transform:translate(0,5px);
+    }
+    100% {
+        -webkit-transform:translate(0,-5px);
+    }
+}
+
+@-webkit-keyframes down {
+    0% {
+        -webkit-transform:translate(0px,0px);
+        opacity:0.8;
+    }
+    70% {
+        -webkit-transform:translate(0,50px);
+        opacity:0;
+    }
+    99% {
+        -webkit-transform:translate(0,50px);
+        opacity:0;
+    }
+    100% {
+        -webkit-transform:translate(0px,0px);
+        opacity:0.8;
+    }
+}
+
+@-webkit-keyframes go {
+    0% {
+        -webkit-transform:translate(0px,0px);
+    }
+    50% {
+        -webkit-transform:translate(0,-10px);
+    }
+    100% {
+        -webkit-transform:translate(0,0);
+    }
+}
+
+/* 音乐图标 */
+.music {
+    width:8%;
+    height:auto;
+    position:fixed;
+    top:15px;
+    right:15px;
+    z-index:999;
+    cursor:pointer;
+}
+.ro {
+    -webkit-animation:rotate 5s linear 0s infinite;
+}
+.music-p {
+    width:140%;
+    height:auto;
+    position:absolute;
+    top:-30%;
+    right:-30%;
+}
+.music img, .music-p img {
+    width:100%;
+    height:auto;
+}
+/* end 音乐图标 */
+
+/* 内容部分 */
+.wrap {
+    margin:0px auto;
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+}
+.swiper-container,.swiper-slide,.swiper-wrapper {
+    width:100%;
+    height:100%;
+}
+.page_01 img, .page_02 img {
+    width:100%;
+}
+.page_01 {
+    width:100%;
+    height:100%;
+    background:-webkit-linear-gradient(top,#030921,#000 100%);
+    position:relative;
+}
